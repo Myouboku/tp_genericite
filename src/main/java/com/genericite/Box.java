@@ -1,13 +1,13 @@
 package com.genericite;
 
-public class Box {
-    private Object object;
+public class Box<type> {
+    private type object;
 
-    public void set(Object object) {
+    public void set(type object) {
         this.object = object;
     }
 
-    public Object get() {
+    public type get() {
         return object;
     }
 }
