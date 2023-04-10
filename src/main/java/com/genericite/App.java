@@ -16,5 +16,8 @@ public final class App {
         Box<String> box2 = new Box<>();
         box2.set("27");
         String s = box2.get();
+        
+        // on peut aussi récupérer le type de l'objet
+        System.out.println(box2.getType());
     }
 }

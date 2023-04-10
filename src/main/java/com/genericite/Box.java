@@ -10,4 +10,9 @@ public class Box<type> {
     public type get() {
         return object;
     }
+
+    // retourne le type de l'objet
+    public Class getType() {
+        return object.getClass();
+    }
 }
