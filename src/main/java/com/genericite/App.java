@@ -10,10 +10,11 @@ public final class App {
         
         // pour améliorer le code, on peut utiliser une classe générique,
         // pour éviter les castings
-        Box<Integer> box2 = new Box<>();
-        box2.set(27);
-        Integer i2 = box2.get();
+        Box<Integer> box1 = new Box<>();
+        box1.set(27);
+        Integer i = box1.get();
+        Box<String> box2 = new Box<>();
         box2.set("27");
-        Box<Object> s2 = box2.get();
+        String s = box2.get();
     }
 }
