@@ -21,14 +21,27 @@ public final class App {
         System.out.println(box2.getType());
 
         // Question 2
-        GetEmploye employe = new GetEmploye("EMP001", "Paul");
-        Double numEmploye = (Double) employe.getNumero();
-        String nomEmploye = (String) employe.getNom();
-        System.out.println("Numéro employé: " + numEmploye);
-        System.out.println("Nom employé: " + nomEmploye);
+        // GetEmploye employe = new GetEmploye("EMP001", "Paul");
+        // Double numEmploye = (Double) employe.getNumero();
+        // String nomEmploye = (String) employe.getNom();
+        // System.out.println("Numéro employé: " + numEmploye);
+        // System.out.println("Nom employé: " + nomEmploye);
 
         // j'ai cette erreur ci dessous :
         // Exception in thread "main" java.lang.ClassCastException: class java.lang.String cannot be cast to class
         // java.lang.Double (java.lang.String and java.lang.Double are in module java.base of loader 'bootstrap')
+
+        GetEmploye<String, String> employe1 = new GetEmploye<String, String>("EMP001", "Paul");
+        String numEmploye1 = employe1.getNumero();
+        String nomEmploye1 = employe1.getNom();
+        System.out.println("Numéro employé 1: " + numEmploye1);
+        System.out.println("Nom employé 1: " + nomEmploye1);
+
+        GetEmploye<Integer, String> employe2 = new GetEmploye<Integer, String>(002, "Michel");
+        Integer numEmploye2 = employe2.getNumero();
+        String nomEmploye2 = employe2.getNom();
+        System.out.println("Numéro employé 2: " + numEmploye2);
+        System.out.println("Nom employé 2: " + nomEmploye2);
+        // on peut passer plusieurs paramètres de type générique
     }
 }

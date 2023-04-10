@@ -1,19 +1,19 @@
 package com.genericite;
 
-public class GetEmploye {
-    Object numero;
-    Object nom;
+public class GetEmploye<typeNum, typeNom> {
+    typeNum numero;
+    typeNom nom;
 
-    public GetEmploye(Object numero, Object nom) {
+    public GetEmploye(typeNum numero, typeNom nom) {
         this.numero = numero;
         this.nom = nom;
     }
 
-    public Object getNumero() {
+    public typeNum getNumero() {
         return numero;
     }
 
-    public Object getNom() {
+    public typeNom getNom() {
         return nom;
     }
 }
